@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Question 4</title>
+</head>
+<script type="text/javascript" src="mainpgm.js"></script>
+<script type="text/javascript">
+    function selection()
+    {
+        var AudAns =Number(sessionStorage.getItem("AudAnswered"));
+        var AudCor =Number(sessionStorage.getItem("AudCorrect"));
+        var selected=document.querySelector("input[name=q4]:checked").getAttribute("value");
+
+        if(selected) {
+            AudAns += 1;
+
+            sessionStorage.setItem("AudAnswered", AudAns);
+            if (selected == "option1") {
+                AudCor += 1;
+                sessionStorage.setItem("AudCorrect", AudCor);
+
+            }
+        }
+
+
+
+        window.location.href = "summary.html"
+    }
+
+</script>
+<body>
+<header>
+    <center>
+        <h1>Online Quiz</h1>
+    </center>
+</header>
+<form action="survey.html">
+    <table frame="box" align="center" style="border-radius: 8px; width:70%">
+        <tr>
+            <th bgcolor="#d3d3d3" style="border-radius: 8px;" colspan=10>
+                Question 4</th>
+        </tr>
+        <tr>
+            <td>Watch the video and and answer the following question.<br>
+                What is the source as mentioned in the video?
+                <br><br><br> </td>
+
+        </tr>
+        <tr>
+            <td>
+                <input type="radio" name="q4" value="nasa">NASA.Gov&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="q4" value="data">Data.Gov
+                <br><br><br><br><br>
+                <input type="radio" name="q4" value="fb">Facebook&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="q4" value="xyz">XYZ.net
+                <br><br><br><br><br>
+                <input type="submit" name="submit"
+                       value="Submit & Next Question"
+                       style="background: transparent; border-radius: 5px; border: 1px solid" onclick="selection()">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="reset" name="reset" value="Cancel & Clear Solution"
+                       style="background: transparent; border-radius: 5px; border: 1px solid">
+            </td>
+            <td>
+                <video width="320" height="240" controls="controls"
+                     src="http://www.nasa.gov/downloadable/videos/meetagamechangerrovekamp.mp4" type="video/mp4">
+                </video>
+            </td>
+        </tr>
+    </table>
+
+</form>
+<br><br><br>
+<footer>
+    <center>
+        &#169;2016, San Jose State University
+    </center>
+</footer>
+
+
+</body>
+</html>

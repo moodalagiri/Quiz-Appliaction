@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Question 2</title>
+    <script type="text/javascript" src="mainpgm.js"></script>
+    <script type="text/javascript">
+        function selection()
+        {
+            var MathAns =Number(sessionStorage.getItem("MathAnswered"));
+            var MathCor =Number(sessionStorage.getItem("MathCorrect"));
+            var selected=document.querySelector("input[name=q2]:checked").getAttribute("value");
+
+            if(selected) {
+                MathAns += 1;
+                sessionStorage.setItem("MathAnswered", MathAns);
+
+                if (selected == "option1") {
+                    MathCor += 1;
+                    var Cor_updated = Number(MathCor);
+                    sessionStorage.setItem("MathCorrect", Cor_updated);
+
+
+                }
+            }
+
+
+            window.location.href = "quest3.html"
+
+        }
+
+    </script>
+</head>
+<body>
+<header>
+    <center>
+        <h1>Online Quiz</h1>
+    </center>
+</header>
+
+    <form action="quest3.html">
+
+            <table frame="box" align="center" style="border-radius: 8px; width:70%">
+                <tr>
+                    <th bgcolor="#d3d3d3" style="border-radius: 8px;" colspan=10>
+                        Question 2</th>
+                </tr>
+
+            <tr>
+                <td>Select the cosine theorem formula.
+                    <br><br></td>
+            </tr>
+
+                <tr>
+                    <td>
+                        <p>
+                        <input type="radio" name="q2" value="option1">
+                            <math>
+                                <mrow>
+                                    <mrow>
+                                        <mi>cos</mi>
+                                        <mo>(</mo>
+                                        <mrow></mrow>
+                                        <mo>&#x3B1</mo>
+                                        <mo>&PlusMinus;</mo>
+                                        <mo>&#x3B2</mo>
+                                        <mo>)</mo>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <mi>cos</mi>
+                                        <mo>&InvisibleTimes;</mo>
+                                        <mo>&#x3B1</mo>
+                                        <mo>&InvisibleTimes;</mo>
+                                        <mi>cos</mi>
+                                        <mo>&#x3B2</mo>
+
+                                    </mrow>
+                                    <mo>&MinusPlus;</mo>
+                                    <mrow>
+                                        <mi>sin</mi>
+                                        <mo>&InvisibleTimes;</mo>
+                                        <mo>&#x3B1</mo>
+                                        <mo>&InvisibleTimes;</mo>
+                                        <mi>sin</mi>
+                                        <mo>&#x3B2</mo>
+                                    </mrow>
+                                </mrow>
+                            </math>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="q2" value="option2">
+                            <math>
+                                <mrow>
+                                    <mrow>
+                                        <mi>sin</mi>
+                                        <mo>(</mo>
+                                        <mrow></mrow>
+                                        <mo>&#x3B1</mo>
+                                        <mo>&PlusMinus;</mo>
+                                        <mo>&#x3B2</mo>
+                                        <mo>)</mo>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mrow>
+                                        <mi>sin</mi>
+                                        <mo>&InvisibleTimes;</mo>
+                                        <mo>&#x3B1</mo>
+                                        <mo>&InvisibleTimes;</mo>
+                                        <mi>cos</mi>
+                                        <mo>&#x3B2</mo>
+
+                                    </mrow>
+                                    <mo>&MinusPlus;</mo>
+                                    <mrow>
+                                        <mi>cos</mi>
+
+                                        <mo>&#x3B1</mo>
+                                        <mo>&InvisibleTimes;</mo>
+                                        <mi>sin</mi>
+                                        <mo>&#x3B2</mo>
+                                    </mrow>
+                                </mrow>
+                            </math><br><br><br><br>
+                            <input type="radio" name="q2" value="option3">
+                            <math>
+                                <mrow>
+                                    <mrow>
+                                        <mi>sin</mi>
+                                        <mo>&InvisibleTimes;</mo>
+                                        <mo>&#x3B1</mo>
+                                        <mo>+</mo>
+                                        <mi>sin</mi>
+                                        <mo>&InvisibleTimes;</mo>
+                                        <mo>&#x3B2</mo>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mn>2</mn>
+                                    <mi>sin</mi>
+                                    <mo>(</mo>
+                                    <mrow>
+                                        <mfrac>
+                                            <mrow>
+                                                <mo>&#x3B1</mo>
+                                                <mo>+</mo>
+                                                <mo>&#x3B2</mo>
+                                            </mrow>
+                                            <mn>2</mn>
+                                        </mfrac>
+
+                                    </mrow>
+                                    <mo>)</mo>
+                                    <mrow>
+
+                                        <mi>cos</mi>
+                                        <mo>(</mo>
+                                        <mrow>
+                                            <mfrac>
+                                                <mrow>
+                                                    <mo>&#x3B1</mo>
+                                                    <mo>-</mo>
+                                                    <mo>&#x3B2</mo>
+                                                </mrow>
+                                                <mn>2</mn>
+                                            </mfrac>
+
+                                        </mrow>
+                                        <mo>)</mo>
+                                    </mrow>
+                                </mrow>
+                            </math>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="q2" value="option4">
+                            <math>
+                                <mrow>
+                                    <mrow>
+                                        <mi>sin</mi>
+                                        <mo>&InvisibleTimes;</mo>
+                                        <mo>&#x3B1</mo>
+                                        <mo>-</mo>
+                                        <mi>sin</mi>
+                                        <mo>&InvisibleTimes;</mo>
+                                        <mo>&#x3B2</mo>
+                                    </mrow>
+                                    <mo>=</mo>
+                                    <mn>2</mn>
+                                    <mi>cos</mi>
+                                    <mo>(</mo>
+                                    <mrow>
+                                        <mfrac>
+                                            <mrow>
+                                                <mo>&#x3B1</mo>
+                                                <mo>+</mo>
+                                                <mo>&#x3B2</mo>
+                                            </mrow>
+                                            <mn>2</mn>
+                                        </mfrac>
+
+                                    </mrow>
+
+                                    <mo>)</mo>
+                                    <mrow>
+
+                                        <mi>sin</mi>
+                                        <mo>(</mo>
+                                        <mrow>
+                                            <mfrac>
+                                                <mrow>
+                                                    <mo>&#x3B1</mo>
+                                                    <mo>-</mo>
+                                                    <mo>&#x3B2</mo>
+                                                </mrow>
+                                                <mn>2</mn>
+                                            </mfrac>
+
+                                        </mrow>
+                                        <mo>)</mo>
+                                    </mrow>
+                                </mrow>
+                            </math>
+                            <br><br><br><br><br>
+                            <input type="button" name="submit"
+                                   value="Submit & Next Question"
+                                   style="background: transparent; border-radius: 5px; border: 1px solid" onclick="selection()">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="reset" name="reset" value="Cancel & Clear Solution"
+                                   style="background: transparent; border-radius: 5px; border: 1px solid">
+
+
+                        </p>
+
+                    </td>
+                </tr>
+            </table>
+
+    </form>
+    <br><br><br>
+    <footer>
+        <center>
+            &#169;2016, San Jose State University
+        </center>
+    </footer>
+
+
+</body>
+</html>

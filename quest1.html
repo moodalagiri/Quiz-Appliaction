@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Question 1 </title>
+<script type="text/javascript" src="mainpgm.js"></script>
+<script type="text/javascript">
+
+    function selection()
+    {
+        var MathAns =Number(sessionStorage.getItem("MathAnswered"));
+
+        var MathCor =Number(sessionStorage.getItem("MathCorrect"));
+
+        var selected=document.querySelector("input[name=q1]:checked").getAttribute("value");
+        if(selected)
+        {
+            MathAns += 1;
+            sessionStorage.setItem("MathAnswered", MathAns);
+
+            if (selected == "option3")
+            {
+                MathCor += 1;
+
+                sessionStorage.setItem("MathCorrect", MathCor);
+
+            }
+        }
+
+        window.location.href = "quest2.html"
+
+    }
+
+</script>
+
+</head>
+<body>
+<header>
+   <center>
+        <h1>Online Quiz</h1>
+   </center>
+</header>
+
+<form action="quest2.html" >
+
+    <table frame="box" align="center" style="border-radius: 8px; width:70%">
+        <tr>
+            <th bgcolor="#d3d3d3" style="border-radius: 8px;" colspan=10>
+                Question 1</th>
+        </tr>
+
+    <tr><td>Given points (x1,y1) and (x2,y2) select the formula to find
+        the equation<br> of given line.<br></td></tr>
+
+
+        <tr>
+            <td> <p>  <input type="radio" name="q1" value="option1">
+
+                <math>
+                    <mrow>
+                        <mi>y</mi>
+                        <mo>=</mo>
+                        <mrow>
+                            <mi>m</mi>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>x</mi>
+                        </mrow>
+                        <mo>+</mo>
+                        <mi>b</mi>
+                    </mrow>
+                </math>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                <input type="radio" name="q1" value="option2">
+                <math>
+                    <msup>
+                        <mrow>
+                            <mo>(</mo>
+                            <mrow>
+
+                                <mi>x</mi>
+
+                                <mo>-</mo>
+
+                                <mi>h</mi>
+
+                            </mrow>
+                            <mo>)</mo>
+                        </mrow>
+                        <mn><sup>2</sup></mn>
+                    </msup>
+                    <mo>+</mo>
+                    <msup>
+                        <mrow>
+                            <mo>(</mo>
+                            <mrow>
+
+                                    <mi>y</mi>
+
+                                    <mo>-</mo>
+
+                                    <mi>k</mi>
+
+                            </mrow>
+                            <mo>)</mo>
+                        </mrow>
+                        <mn><sup>2</sup></mn>
+                    </msup>
+                    <mo>=</mo>
+                    <msup>
+                        <mi>r</mi>
+                        <mn><sup>2</sup></mn>
+                    </msup>
+                </math> <br><br><br>
+                <input type="radio" name="q1" value="option3">
+                <math>
+                    <mrow>
+
+                        <mrow>
+                            <mi>y</mi>
+                            <mo>-</mo>
+
+                        </mrow>
+                        <mrow>
+                        <msub>
+                            <mo>y</mo>
+                            <mn><sub>1</sub></mn>
+
+                        </msub>
+                        </mrow>
+                        <mo>=</mo>
+                        <mrow><mi>m</mi></mrow>
+                        <mrow>
+                            <mo>(</mo>
+                            <mi>x</mi>
+                            <mo>-</mo>
+                            <msub>
+                                <mi>x</mi>
+                                <mn><sub>1</sub></mn>
+                            </msub>
+                            <mo>)</mo>
+                        </mrow>
+
+
+
+                    </mrow>
+
+                </math>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="q1" value="option4">
+                <math>
+                    <mrow>
+                        <mrow>
+                            <mi>y</mi>
+                            <mo>-</mo>
+                            <msub>
+                                <mi>y</mi>
+                                <mn><sub>2</sub></mn>
+                            </msub>
+                        </mrow>
+                        <mo>=</mo>
+                        <mrow>
+                            <mfrac>
+                               <mrow>
+
+                                   <msub>
+                                       <mi>y</mi>
+                                       <mn><sub>2</sub></mn>
+                                   </msub>
+                                   <mo>-</mo>
+                                   <msub>
+                                       <mi>y</mi>
+                                       <mn><sub>1</sub></mn>
+                                   </msub>
+
+
+                               </mrow>
+                                <mrow>
+                                    <msub>
+                                        <mi>x</mi>
+                                        <mn><sub>2</sub></mn>
+                                    </msub>
+                                    <mo>-</mo>
+                                    <msub>
+                                        <mi>x</mi>
+                                        <mn><sub>1</sub></mn>
+                                    </msub>
+                                </mrow>
+                            </mfrac>
+                            <mrow>
+                                <mo>(</mo>
+                                <mi>x</mi>
+                                <mo>-</mo>
+                                <msub>
+                                    <mi>x</mi>
+                                    <mn><sub>2</sub></mn>
+                                </msub>
+                                <mo>)</mo>
+                            </mrow>
+
+                        </mrow>
+                    </mrow>
+                </math>
+
+                <br><br>
+                <input type="button" name="submit"
+                       value="Submit & Next Question"
+                       style="background: transparent; border-radius: 5px; border: 1px solid" onclick="selection()">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="reset" name="reset" value="Cancel & Clear Solution"
+                       style="background: transparent; border-radius: 5px; border: 1px solid">
+
+                </p>
+
+            </td>
+            <td><img src="img/quest1.PNG"></td>
+
+        </tr>
+    </table>
+
+
+</form>
+
+
+</body>
+<br><br><br>
+<footer>
+    <center>
+        &#169;2016, San Jose State University
+    </center>
+</footer>
+
+
+</html>

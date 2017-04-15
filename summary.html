@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src = "js/mainpgm.js"></script>
+    <script type="text/javascript">
+        function summary(){
+
+
+            var quantAnswered = sessionStorage.getItem("MathAnswered");
+            var quantCorrect = sessionStorage.getItem("MathCorrect");
+           if(quantCorrect == null)
+           {
+               quantCorrect = 0;
+
+           }
+            var engAnswered = sessionStorage.getItem("EngAnswered");
+            var engCorrect = sessionStorage.getItem("EngCorrect");
+            if(engCorrect == null)
+            {
+                engCorrect = 0;
+
+            }
+            var audAnswered = sessionStorage.getItem("AudAnswered");
+            var audCorrect = sessionStorage.getItem("AudCorrect");
+            if(audCorrect == null)
+            {
+                audCorrect = 0;
+
+            }
+            var QuantScore = sessionStorage.getItem("quantScore");
+            var Engscore = sessionStorage.getItem("engScore");
+            var AudScore = sessionStorage.getItem("audScore");
+
+
+            document.getElementById("qAns").innerHTML += quantAnswered;
+            document.getElementById("qCor").innerHTML += quantCorrect;
+            document.getElementById("eAns").innerHTML += engAnswered;
+            document.getElementById("eCor").innerHTML += engCorrect;
+            document.getElementById("aAns").innerHTML += engAnswered;
+            document.getElementById("aCor").innerHTML += audCorrect;
+
+             QuantScore = Number((quantCorrect /quantAnswered )*100);
+            EngScore = Number((engCorrect/engAnswered)*100);
+             AudScore = Number((audCorrect/audAnswered)*100);
+            document.getElementById("qScore").innerHTML += QuantScore
+            document.getElementById("aScore").innerHTML += AudScore
+            document.getElementById("eScore").innerHTML += EngScore;
+        }
+    </script>
+</head>
+<body onload="summary()">
+<header>
+    <center>
+        <h1>Online Quiz</h1>
+    </center>
+</header>
+<form action="finish.html" >
+    <table frame="box" align="center" style="border-radius: 8px; width:70%">
+        <tr>
+            <th bgcolor="#d3d3d3" style="border-radius: 8px;" colspan=10>
+                Summary</th>
+        </tr>
+        <tr>
+            <td>
+                <table frame="box" allign="center" style="border-radius: 8px; width:100%">
+                    <tr>
+                        <td>
+                           <details>
+                                <summary>Quantitative Section</summary>
+                                    <p id = "qAns"><strong>Number of questions answered : </strong></p>
+                               <p id = "qCor"><strong>Number of correct answers : </strong></p>
+                               <p id = "qScore"><strong>Score : </strong></p>
+
+
+                           </details>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <details>
+                                <summary>Reading Section </summary>
+                                <p id = "eAns"><strong>Number of questions answered : </strong></p>
+                                <p id = "eCor"><strong>Number of correct answers : </strong></p>
+                                <p id = "eScore"><strong>Score : </strong></p>
+
+
+                            </details>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <details>
+                                <summary>Audio/Video Section</summary>
+                                <p id = "aAns"><strong>Number of questions answered : </strong></p>
+                                <p id = "aCor"><strong>Number of correct answers : </strong></p>
+                                <p id = "aScore"><strong>Score : </strong></p>
+
+
+                            </details>
+                        </td>
+                    </tr>
+                </table>
+
+
+                    <center>
+               <p style="font-size:25px;"><strong> Thank You!</strong></p>
+                    </center>
+
+                <p>
+                    <center>
+
+
+                <input type="submit" name="finish"
+                       value="Finish"
+                       style="background: transparent; border-radius: 5px; border: 1px solid">
+
+            </center>
+                </p>
+            </td>
+        </tr>
+    </table>
+</form>
+<br><br><br>
+<footer>
+    <center>
+        &#169;2016, San Jose State University
+    </center>
+</footer>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Survey</title>
+
+
+</head>
+
+<body>
+<header>
+    <center>
+        <h1>Online Quiz</h1>
+    </center>
+</header>
+<form action="summary.html" name="usrform">
+    <table frame="box" align="center" style="border-radius: 8px; width:50%">
+        <tr>
+            <th bgcolor="#d3d3d3" style="border-radius: 8px;" colspan=10>
+                Survey</th>
+        </tr>
+        <tr>
+           <td> <p>How would you like the center?</p><br> Comments : <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;<textarea rows="4" cols="50" name="comment" ></textarea>
+               <br><br>
+               <p>Select test area Location</p>
+               <p>City : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Room Number#:</p>
+               <input type = "text" list = "city">
+               <datalist id = "city">
+                   <option  value="San Jose">
+                   <option  value="San Francisco">
+
+                   <option value="Palo Alto">
+                   <option  value="Mountain View">
+
+                   <option  value="Sunnyvale">
+                   <option  value="Milpitas">
+               </datalist>
+
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <input type = "text" list = "list1">
+               <datalist id = "list1" >
+
+                   <option  value="Room 337">
+                   <option  value="Room 210">
+
+                   <option  value="Room 110">
+                   <option value="Room 410">
+
+
+
+               </datalist>
+               <br><br><br><br><br><br>
+               <input type="submit" name="submit"
+                      value="Submit & Get Score"
+                      style="background: transparent; border-radius: 5px; border: 1px solid">
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <input type="submit" name="submit" value="Skip and get score"
+                      style="background: transparent; border-radius: 5px; border: 1px solid">
+           </td>
+
+        </tr>
+
+        </table>
+    </form>
+<br><br><br>
+<footer>
+    <center>
+        &#169;2016, San Jose State University
+    </center>
+</footer>
+</body>
+</html>

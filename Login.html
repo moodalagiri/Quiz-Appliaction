@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CMPE 280</title>
+    <style>
+        .login{position:relative;
+            left:460px;
+            border: 1px solid black;
+            border-spacing: 10px;
+            border-radius:5px;
+            width:400px;
+            padding:10px;}
+
+
+    </style>
+    <script type = "text/javascript">
+        function validation()
+        {
+            var uname=document.getElementById("uname").value;
+            var pwd=document.getElementById("pwd").value;
+            console.log(uname);
+            if(uname=="sjsu" && pwd=="sjsu")
+            {
+
+                window.location.href = "quest1.html";
+
+            }// alert agthide so function is working onl rediecting thing
+            else
+            {
+                alert("Please enter credentsials");
+                window.location.href ="../Login.html";
+            }
+        }
+    </script>
+</head>
+<header>
+    <center>
+        <h1>Online Quiz</h1>
+    </center>
+</header>
+
+<body>
+
+<div class="login" style="text-align:center">
+    <table frame="hsides" align="center" style="border-radius: 8px">
+        <tr>
+            <th bgcolor="#d3d3d3" style="border-radius: 8px;" colspan=10>
+                User Login</th>
+        </tr>
+    </table>
+
+<p style="text-align:center">Username &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="uname" value="" name="username"></p>
+<p style="text-align:center">Password &nbsp;&nbsp;&nbsp;&nbsp;<input type="password" id="pwd" value="" name="password"></p>
+    <p style="text-align:center">
+    <label>
+        <a href="" style="text-decoration: none">Create Account/Forgot?</a>
+    </label>
+        &nbsp;&nbsp;<input type="button" name="login" value="login" style="background: transparent; border-radius: 5px; border: 1px solid" onclick="validation();"></p>
+
+</div>
+
+</body>
+<br><br><br>
+<footer>
+    <center>
+        &#169;2016, San Jose State University
+    </center>
+</footer>
+</html>
